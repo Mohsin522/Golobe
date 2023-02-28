@@ -1,0 +1,441 @@
+.flight_wrapper {
+    .landing_map_Section {
+        padding: 20px 0;
+
+        .map_image_div {
+            height: 70vh;
+            margin: 30px 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .travel_pakages_Section {
+        padding: 20px 0;
+
+        .travel_pakages_card_outer {
+            @media (max-width:767px) {
+                padding: 0 20px;
+
+            }
+
+            margin-top: 20px;
+
+            .travel_pakages_card {
+                height: 420px;
+                position: relative;
+                margin-top: 10px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+
+                }
+
+                .pkg_detail {
+                    width: 100%;
+                    padding: 5px 15px;
+                    position: absolute;
+                    bottom: 10px;
+                    transform: translateX(-50%);
+                    left: 50%;
+
+                    .flight_booking_button {
+                        width: 100%;
+                        background-color: var(--data-color-primary);
+                        border-radius: 6px;
+                        outline: none;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 42px;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: var(--data-text-color);
+                    }
+
+                    .pkg_info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        color: white;
+                        margin-bottom: 10px;
+
+                        .pkg_name {
+                            display: flex;
+                            flex-direction: column;
+
+                            h5 {
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                                margin-bottom: 0px;
+                            }
+
+                            p {
+                                margin: 0px;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+
+                            }
+                        }
+
+                        .pkg_price {
+                            p {
+                                margin: 0px;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .travel_feature_place_Section {
+        margin: 40px 0 10px 0;
+        padding-bottom: 40px;
+
+        .travel_feature_place_outer {
+            margin-top: 30px;
+            display: flex;
+
+            .travel_feature_place_pakage {
+                width: 40%;
+                background-color: var(--data-color-primary);
+                border-radius: 18px;
+                padding: 20px 20px;
+                position: relative;
+
+                .feature_header {
+                    display: flex;
+                    justify-content: space-between;
+
+
+                    h3 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 34px;
+                        color: var(--data-text-color);
+
+                    }
+
+                    .price {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: white;
+                        justify-content: center;
+                        padding: 5px 15px;
+                        border-radius: 8px;
+                        height: fit-content;
+
+                        p {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            text-align: center;
+                            margin: 0px;
+                            color: var(--data-text-color);
+                        }
+
+                        h5 {
+                            font-style: normal;
+                            font-weight: 600;
+                            color: var(--data-text-color);
+
+                            font-size: 20px;
+                        }
+
+
+                    }
+
+                }
+
+                .place_description {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: var(--data-text-color);
+                }
+
+                .booking_button {
+                    position: absolute;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    bottom: 10px;
+                    width: 95%;
+                    border: none;
+                    outline: none;
+                    background-color: white;
+                    color: var(--data-text-color);
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    height: 47px;
+                    border-radius: 4px;
+                }
+
+
+            }
+
+            .travel_feature_place_images {
+                width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                .place_immg {
+                    width: 48%;
+                    margin: 5px 0;
+
+                    img {
+                        height: 200px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.landing_wrapper {
+    .Reviews_section {
+        padding-bottom: 40px;
+        .reviews_Slider {
+            height: auto;
+            padding: 30px 0;
+
+            .reviewsslider {
+                height: 100%;
+                padding: 30px 0 30px 10px;
+                background-color: transparent;
+
+                .swiper-pagination {
+                    display: none;
+                }
+
+                .swiper-slide {
+                    height: 500px;
+                    background-color: white;
+                    border-radius: 16px;
+                    box-shadow: 20px 20px 5px 0px rgba(141, 211, 187, 0.75);
+                    -webkit-box-shadow: 20px 20px 5px 0px rgba(141, 211, 187, 0.75);
+                    -moz-box-shadow: 20px 20px 5px 0px rgba(141, 211, 187, 0.75);
+                    .box{
+                    border-radius: 16px;
+
+                        height: 100%;
+                        width: 100%;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.landing_Sections_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:767px) {
+        flex-direction: column;
+
+    }
+
+    .see_All_btn {
+        margin-left: auto;
+        height: 40px;
+        border: 1px solid #8DD3BB;
+        border-radius: 4px;
+        padding: 0 16px;
+        color: var(--data-text-color);
+        font-style: normal;
+        font-weight: 500;
+        outline: none;
+        font-size: 14px;
+    }
+
+}
+
+.footer_wrapper {
+    background-color: var(--data-color-primary);
+    position: relative;
+    padding-bottom: 40px;
+    margin-top: 160px;
+
+    .newsLetter_outer {
+        margin-top: -120px;
+        margin-bottom: 60px;
+        padding: 30px 20px 0 20px;
+        border-radius: 10px;
+        background-color: #CDEAE1;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:767px) {
+            padding: 15px 10px;
+            justify-content: center;
+            border-radius: 0px;
+
+
+        }
+
+        .subscription_area {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+
+            h2 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 34px;
+                color: var(--data-text-color);
+                margin-bottom: 16px;
+            }
+
+            h5 {
+                font-style: normal;
+                font-weight: 700;
+                color: var(--data-text-color);
+                opacity: 0.75;
+                font-size: 20px;
+
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                opacity: 0.75;
+
+                color: var(--data-text-color);
+
+            }
+
+            .newsletter_input {
+                display: flex;
+                column-gap: 10px;
+
+                @media (max-width:767px) {
+                    flex-direction: column;
+                    align-items: center;
+
+                }
+
+                input {
+                    height: 46px;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                    width: 300px;
+                    border: none;
+                    outline: none;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+
+                button {
+                    @media (max-width:767px) {
+                        margin-top: 10px;
+
+                    }
+
+                    width: fit-content;
+                    padding: 0 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    height: 46px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    border-radius: 4px;
+                }
+
+            }
+        }
+
+        .newsletter_img {
+            @media (max-width:767px) {
+                display: none;
+
+            }
+
+            width: 30%;
+            height: auto;
+        }
+
+    }
+
+    .footer_logo_container {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            height: auto;
+            width: 110px;
+            margin-bottom: 20px;
+        }
+
+        .social_icons_outer {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            column-gap: 8px;
+
+            svg {
+                fill: black;
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    .footer_links_list {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--data-text-color);
+            margin-bottom: 8px;
+
+
+        }
+
+        .footer_links_ul {
+            padding: 0px;
+            margin: 0px;
+            list-style-type: none;
+
+            li {
+                margin: 6px 0;
+
+                a {
+                    text-decoration: none;
+                    color: var(--data-text-color);
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+
+}
