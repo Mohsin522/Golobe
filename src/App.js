@@ -12,6 +12,11 @@ import CreatePassword from './Components/Pages/User/CreatePassword';
 
 // Flight Pages 
 import Flight from './Components/Pages/Flight/Flight';
+
+// Hotel Pages 
+import Hotel from './Components/Pages/Hotel/Hotel';
+
+// style files 
 import './App.css';
 import './Components/Assets/Style/user.scss';
 import './Components/Assets/Style/App.scss';
@@ -33,10 +38,13 @@ function App() {
 
          <Route element={<Layout />}>
             <Route path='/flight' element={<Flight />}></Route>
+            <Route path='/hotel' element={<Hotel />}></Route>
+
+            <Route path='/' element={<Landing />}></Route>
+
 
          </Route>
          
-         <Route path='/' element={<Landing />}></Route>
       </Routes>
     </>
   );
