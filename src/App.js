@@ -12,7 +12,7 @@ import CreatePassword from './Components/Pages/User/CreatePassword';
 
 // Flight Pages 
 import Flight from './Components/Pages/Flight/Flight';
-
+import FlightsList from './Components/Pages/Flight/FlightsList';
 // Hotel Pages 
 import Hotel from './Components/Pages/Hotel/Hotel';
 
@@ -20,6 +20,8 @@ import Hotel from './Components/Pages/Hotel/Hotel';
 import './App.css';
 import './Components/Assets/Style/user.scss';
 import './Components/Assets/Style/App.scss';
+import './Components/Assets/Style/Flight.scss';
+
 
 
 function App() {
@@ -37,12 +39,10 @@ function App() {
          </Route>
 
          <Route element={<Layout />}>
-            <Route path='/flight' element={<Flight />}></Route>
+            <Route path='/' element={<Landing />} />
+            <Route path='flight' element={<Flight />} />
+            <Route path="flight/list" element={<FlightsList />} />
             <Route path='/hotel' element={<Hotel />}></Route>
-
-            <Route path='/' element={<Landing />}></Route>
-
-
          </Route>
          
       </Routes>
