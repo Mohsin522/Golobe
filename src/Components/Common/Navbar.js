@@ -17,7 +17,6 @@ const Navbar = () => {
    });
  }, []);
   let location=useLocation();
-  const homeClass = location.pathname === "/" ? "home_Navbar app_navbar" : "app_navbar";
   const flightClass = location.pathname === "/flight" ? "flight_active_link" : "";
   const hotelClass = location.pathname === "/hotel" ? "hotel_active_link" : "";
 

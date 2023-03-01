@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Container,Row } from 'react-bootstrap';
+import { Outlet, useNavigate } from 'react-router-dom';
 import Heading from '../../Common/Heading';
 import Map from '../../Assets/Images/map.png'
 import Place1 from '../../Assets/Images/places/place1.png';
@@ -10,12 +11,111 @@ import Feature1 from '../../Assets/Images/places/F1.png';
 import Feature2 from '../../Assets/Images/places/F2.png';
 import Feature3 from '../../Assets/Images/places/F3.png';
 import Feature4 from '../../Assets/Images/places/F4.png';
+import TextField from "@mui/material/TextField";
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import NearMeIcon from '@mui/icons-material/NearMe';
+
+import FlightBanner from '../../Common/Flight/FlightBanner';
+
 
 
 
 const Flight = () => {
+  let navigate=useNavigate();
+  const [trip, setTrip] = useState('');
+
+  const handleTripChange = (event) => {
+    setTrip(event.target.value);
+  };
   return (
     <div className='flight_wrapper'>
+      <div className='banner_Section_outer'>
+        <FlightBanner />
+        <div className='search_section'>
+          <Container>
+            <Row>
+            <div className='col-12'>
+              <p className='heading'>Where are you flying..?</p>
+            </div>
+            <div className='col-12 col-md-3'>
+                            <div className='form_input_outer'>
+                                    <TextField
+                                        sx={{ width: "100%" }}
+                                        id="outlined-basic"
+                                        label="From-T0"
+                                        variant="outlined"
+                                        className="field-text-border"
+                                        name="flight"                                       
+                                        type="text" 
+                                       
+                                    />
+                            </div>
+            </div>
+            <div className='col-12 col-md-3'>
+            <div className='form_input_outer'>
+                        <FormControl fullWidth 
+                            className="field-text-border"
+                            >
+                            <InputLabel id="demo-simple-select-label">Trip</InputLabel>
+                            <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={trip}
+                            label="Trip"
+                            onChange={handleTripChange}
+
+                            >
+                            <MenuItem value={10}>Pakistan</MenuItem>
+                            <MenuItem value={20}>India</MenuItem>
+                            <MenuItem value={30}>Canada</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+            </div>
+
+            <div className='col-12 col-md-3'>
+            <div className='form_input_outer'>
+                        <TextField
+                            sx={{ width: "100%" }}
+                            id="outlined-basic"
+                            label="Depart-Return"
+                            variant="outlined"
+                            className="field-text-border"
+                            name="flight"                                       
+                            type="text" 
+                            
+                        />
+                </div>
+            </div>
+            <div className='col-12 col-md-3'>
+            <div className='form_input_outer'>
+                        <TextField
+                            sx={{ width: "100%" }}
+                            id="outlined-basic"
+                            label="Passenger-Class"
+                            variant="outlined"
+                            className="field-text-border"
+                            name="flight"                                       
+                            type="text" 
+                            
+                        />
+                </div>
+            </div>
+            <div className='col-12'>
+                <div className='tabs_button_section'>
+                    <button>+ Add Promo Code</button>
+                    <button onClick={()=>navigate('list')}><NearMeIcon /> Show Flight</button>
+
+                </div>
+            </div>
+            </Row>
+          </Container>
+
+        </div>
+      </div>
        <div className='landing_map_Section'>
         <Container>
           <div className='landing_Sections_header'>
@@ -148,7 +248,7 @@ const Flight = () => {
             
           </Container>
       </div>
-
+      
     </div>
   )
 }

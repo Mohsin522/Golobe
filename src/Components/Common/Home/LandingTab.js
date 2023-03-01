@@ -8,9 +8,11 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { useNavigate } from 'react-router-dom';
 
 
 const LandingTab = () => {
+    let navigate= useNavigate();
     const [tabvalue, setTabvalue] = useState(true);
     const [trip, setTrip] = useState('');
 
@@ -101,7 +103,8 @@ const LandingTab = () => {
                         <div className='col-12'>
                             <div className='tabs_button_section'>
                                 <button>+ Add Promo Code</button>
-                                <button><NearMeIcon /> Show Flight</button>
+                                <button onClick={()=>navigate('flight')}><NearMeIcon /> Show Flight</button>
+
 
                             </div>
                         </div>
@@ -181,7 +184,7 @@ const LandingTab = () => {
                         <div className='col-12'>
                             <div className='tabs_button_section'>
                                 <button>+ Add Promo Code</button>
-                                <button><NearMeIcon /> Show Flight</button>
+                                <button onClick={()=>navigate('flight')}><NearMeIcon /> Show Flight</button>
 
                             </div>
                         </div>

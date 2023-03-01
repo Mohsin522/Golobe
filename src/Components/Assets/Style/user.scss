@@ -348,3 +348,20 @@ input:-webkit-autofill:active {
         }
     }
 }
+.checkmark_outer {
+    display: flex;
+    align-items: center;
+
+    .MuiButtonBase-root {
+        padding-right: 3px;
+        color: var(--data-color-primary) !important;
+    }
+
+    p {
+        margin: 0px !important;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        columns: var(--data-text-color);
+    }
+}
