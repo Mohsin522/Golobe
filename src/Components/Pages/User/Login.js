@@ -33,7 +33,7 @@ const Login = () => {
         <div className='auth_form_container'>
             <div className='auth_form_container_inner'>
                 <div className='auth_logo_container'>
-                    <Link to='/'><img src={Logo}></img></Link>
+                    <Link to='/'><img src={Logo} alt="logo"></img></Link>
                 </div>
                 <div className='auth_form'>
                     <Container>

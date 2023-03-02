@@ -2,9 +2,6 @@ import React,{useState} from 'react';
 import AuthSlider from '../../Common/auth/AuthSlider';
 import FormHeader from '../../Common/auth/FormHeader';
 
-import Facebook from '../../Assets/Images/icons/facebook.png';
-import Google from '../../Assets/Images/icons/google.png';
-import Apple from '../../Assets/Images/icons/apple.png';
 import Logo from '../../Assets/Images/Logo.png';
 import { Link} from 'react-router-dom';
 import { Container,Row  } from 'react-bootstrap';
@@ -29,7 +26,7 @@ const PaymentMethod = () => {
         <div className='auth_form_container'>
             <div className='auth_form_container_inner'>
                 <div className='auth_logo_container'>
-                    <Link to='/'><img src={Logo}></img></Link>
+                    <Link to='/'><img src={Logo} alt="logo"></img></Link>
                 </div>
                 <div className='auth_form'>
                     <Container>

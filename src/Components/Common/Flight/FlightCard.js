@@ -2,8 +2,11 @@ import React from 'react';
 import Company from '../../Assets/Images/Flight/company.png';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const FlightCard = () => {
+    let navigate=useNavigate();
+    const location = useLocation()
   return (
     <div className='flight_card_inner'>
         <div className='card_img'>
@@ -24,7 +27,7 @@ const FlightCard = () => {
             <div className='time_div_outer_Container'>
                 <div className='time_div'>
                     <div className='checkmark_outer'>
-                    <Checkbox  defaultChecked />
+                        <Checkbox  defaultChecked />
                     </div>
                     <div className='flight_time'>
                         <h2><span>12:00 pm</span>-<span>01:28 pm</span></h2>
@@ -55,9 +58,10 @@ const FlightCard = () => {
                     </div>
                 </div>
             </div>
+            {console.log(location.pathname, 'pathname')}
             <div className='detail_fav_container'>
                 <button className='fav_button'><FavoriteBorderIcon /></button>
-                <button className='detail_btn'>View Detail</button>
+                <button className='detail_btn' onClick={()=>navigate("/flight/list/1", {replace: true})}>View Detail</button>
             </div>
             
         </div>

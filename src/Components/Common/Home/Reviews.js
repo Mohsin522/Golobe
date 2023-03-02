@@ -52,10 +52,10 @@ const Reviews = () => {
                             <div className='company_name'>
                                <h4>Olga</h4>
                                <p>Weave Studios – Kai Tak</p>
-                               <Link to=""><img src={Google}></img>Google</Link>
+                               <Link to=""><img src={Google} alt="img"></img>Google</Link>
                             </div>
                             <div className='bottom_img'>
-                              <img src={Review}></img>
+                              <img src={Review} alt="img"></img>
                             </div>
                           </div>
                          </SwiperSlide>
@@ -76,10 +76,10 @@ const Reviews = () => {
                             <div className='company_name'>
                                <h4>Olga</h4>
                                <p>Weave Studios – Kai Tak</p>
-                               <Link to=""><img src={Google}></img>Google</Link>
+                               <Link to=""><img src={Google} alt="img"></img>Google</Link>
                             </div>
                             <div className='bottom_img'>
-                              <img src={Review}></img>
+                              <img src={Review} alt="img"></img>
                             </div>
                           </div>
                          </SwiperSlide>
@@ -100,10 +100,10 @@ const Reviews = () => {
                             <div className='company_name'>
                                <h4>Olga</h4>
                                <p>Weave Studios – Kai Tak</p>
-                               <Link to=""><img src={Google}></img>Google</Link>
+                               <Link to=""><img src={Google} alt="img"></img>Google</Link>
                             </div>
                             <div className='bottom_img'>
-                              <img src={Review}></img>
+                              <img src={Review} alt="img"></img>
                             </div>
                           </div>
                          </SwiperSlide>
@@ -124,10 +124,10 @@ const Reviews = () => {
                             <div className='company_name'>
                                <h4>Olga</h4>
                                <p>Weave Studios – Kai Tak</p>
-                               <Link to=""><img src={Google}></img>Google</Link>
+                               <Link to=""><img src={Google} alt="img"></img>Google</Link>
                             </div>
                             <div className='bottom_img'>
-                              <img src={Review}></img>
+                              <img src={Review} alt="img"></img>
                             </div>
                           </div>
                          </SwiperSlide>
@@ -148,10 +148,10 @@ const Reviews = () => {
                             <div className='company_name'>
                                <h4>Olga</h4>
                                <p>Weave Studios – Kai Tak</p>
-                               <Link to=""><img src={Google}></img>Google</Link>
+                               <Link to=""><img src={Google} alt="img"></img>Google</Link>
                             </div>
                             <div className='bottom_img'>
-                              <img src={Review}></img>
+                              <img src={Review} alt="img"></img>
                             </div>
                           </div>
                          </SwiperSlide>
@@ -172,10 +172,10 @@ const Reviews = () => {
                             <div className='company_name'>
                                <h4>Olga</h4>
                                <p>Weave Studios – Kai Tak</p>
-                               <Link to=""><img src={Google}></img>Google</Link>
+                               <Link to=""><img src={Google} alt="img"></img>Google</Link>
                             </div>
                             <div className='bottom_img'>
-                              <img src={Review}></img>
+                              <img src={Review} alt="img"></img>
                             </div>
                           </div>
                          </SwiperSlide>

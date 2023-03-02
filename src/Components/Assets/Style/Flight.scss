@@ -41,13 +41,14 @@
         border-radius: 12px;
 
 
-@media (max-width:767px) {
-    height: auto;
-    margin-top: 0px;
-    width: 100%;
-    border-radius: 0px;
-    
-}
+        @media (max-width:767px) {
+            height: auto;
+            margin-top: 0px;
+            width: 100%;
+            border-radius: 0px;
+
+        }
+
         .tabs_button_section {
             display: flex;
             justify-content: end;
@@ -92,16 +93,121 @@
 }
 
 .flights_list_outer {
-padding-top: 40px;
+    padding-top: 40px;
+
     .Filter_outer {
         height: 100%;
-        background-color: var(--data-color-primary);
         width: 100%;
         padding: 20px 0;
 
         .Filter_inner_container {
+            padding-right: 20px;
             border-right: 1px solid gray;
             height: 100%;
+
+            .filter_heading {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                color: var(--data-text-color);
+            }
+
+            .filter_accordian {
+                .MuiAccordion-root {
+                    background-color: transparent;
+                    box-shadow: none !important;
+
+                    .MuiAccordionDetails-root {
+                        padding: 10px 10px;
+                    }
+
+                    .range_slider {
+                        .MuiSlider-root {
+                            color: var(--data-color-primary);
+                            height: 2px;
+
+                            .MuiSlider-markLabel[data-index='0'] {
+                                left: 7px !important;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 12px;
+                                color: var(--data-text-color);
+
+
+
+                            }
+
+                            .MuiSlider-markLabel[data-index='1'] {
+                                left: 96% !important;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 12px;
+                                color: var(--data-text-color);
+
+
+
+                            }
+
+                            .MuiSlider-rail {
+                                color: black;
+                                opacity: 1;
+                                height: 2px;
+                            }
+
+                            .MuiSlider-track {
+                                color: black;
+                            }
+                        }
+                    }
+                    .filter_ceckmarks_outer{
+                        .MuiButtonBase-root {
+                            padding: 0px !important;
+                            margin-right: 10px !important;
+                            color: var(--data-color-primary) !important;
+                        }
+                        .MuiFormControlLabel-root{
+                            margin: 4px 0;
+                        }
+                    }
+                    .rating_buttons{
+                        display: flex;
+                        column-gap: 10px;
+                        margin-left: -10px;
+                        .rate_btn{
+                            height: 36px;
+                            padding: 0 10px;
+                            border: 1px solid var(--data-color-primary);
+                            border-radius: 4px;
+                            background-color: transparent;
+                            color: var(--data-text-color);
+                            font-size: 14px;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    .MuiButtonBase-root {
+                        padding: 5px 0;
+
+                        .MuiTypography-root {
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 16px;
+                            color: var(--data-text-color);
+                        }
+                    }
+
+                    &:first-of-type {
+                        border-radius: 0px !important;
+                    }
+
+                    &:last-of-type {
+                        border-radius: none;
+                    }
+                }
+            }
 
         }
     }
@@ -118,9 +224,10 @@ padding-top: 40px;
 
         .row {
             width: 100%;
+
             @media (max-width:767px) {
-               width: unset;
-                
+                width: unset;
+
             }
         }
 
@@ -235,17 +342,20 @@ padding-top: 40px;
                 border-radius: 12px;
                 margin: 20px 0;
                 display: flex;
+
                 @media (max-width:767px) {
                     flex-direction: column;
                     height: auto;
-                    
+
                 }
 
                 .card_img {
                     @media (max-width:767px) {
-                       margin-bottom: 10px;;
-                        
+                        margin-bottom: 10px;
+                        ;
+
                     }
+
                     img {
                         height: 100px;
                         width: auto;
@@ -315,15 +425,17 @@ padding-top: 40px;
                     .time_div_outer_Container {
                         border-bottom: 1px solid lightgray;
                         padding-bottom: 30px;
+
                         .time_div {
                             display: flex;
                             align-items: flex-start;
                             margin-top: 20px;
+
                             @media (max-width:767px) {
-                               flex-wrap: wrap;
-                               border-bottom: 2px solid var(--data-color-primary);
-                               padding-bottom: 10px;
-                                
+                                flex-wrap: wrap;
+                                border-bottom: 2px solid var(--data-color-primary);
+                                padding-bottom: 10px;
+
                             }
 
                             .checkmark_outer {
@@ -372,9 +484,10 @@ padding-top: 40px;
                                 display: flex;
                                 flex-direction: column;
                                 margin-left: 30px;
+
                                 @media (max-width:767px) {
-                                   margin-top: 5px;
-                                    
+                                    margin-top: 5px;
+
                                 }
 
                                 h4 {
@@ -397,10 +510,12 @@ padding-top: 40px;
                             }
                         }
                     }
-                    .detail_fav_container{
+
+                    .detail_fav_container {
                         display: flex;
                         column-gap: 10px;
-                        .fav_button{
+
+                        .fav_button {
                             padding: 0 10px;
                             border-radius: 4px;
                             border: 1px solid var(--data-color-primary);
@@ -410,14 +525,15 @@ padding-top: 40px;
                             background-color: transparent;
 
                         }
-                        .detail_btn{
+
+                        .detail_btn {
                             flex: 1;
                             background-color: var(--data-color-primary);
                             color: var(--data-text-color);
                             height: 44px;
                             font-style: normal;
-font-weight: 600;
-font-size: 14px;
+                            font-weight: 600;
+                            font-size: 14px;
                             border-radius: 4px;
                             border: none;
                             outline: none;
