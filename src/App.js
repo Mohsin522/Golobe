@@ -48,7 +48,7 @@ function App() {
             <Route path='/' element={<Landing />} />
             <Route path='flight' element={<Flight />} />
             <Route path="flight/list" element={<FlightsList />} />
-            <Route path="flight/list/1" element={<FlightDetail />} />
+            <Route path="flight/list/:id" element={<FlightDetail />} />
 
             
             <Route path='/hotel' element={<Hotel />}></Route>
