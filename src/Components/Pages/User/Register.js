@@ -14,7 +14,6 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
 import FormHeader from '../../Common/auth/FormHeader';
@@ -33,7 +32,7 @@ const Register = () => {
         <div className='auth_form_container'>
             <div className='auth_form_container_inner'>
                 <div className='auth_logo_container'>
-                    <Link to='/'><img src={Logo}></img></Link>
+                    <Link to='/'><img src={Logo} alt="logo"></img></Link>
                 </div>
                 <div className='auth_form'>
                     <Container>

@@ -2,9 +2,7 @@ import React,{useState} from 'react';
 import Logo from '../../Assets/Images/Logo.png';
 import { Link} from 'react-router-dom';
 import { Container,Row  } from 'react-bootstrap';
-import Facebook from '../../Assets/Images/icons/facebook.png';
-import Google from '../../Assets/Images/icons/google.png';
-import Apple from '../../Assets/Images/icons/apple.png';
+
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -34,7 +32,7 @@ const Verify = () => {
         <div className='auth_form_container'>
             <div className='auth_form_container_inner'>
                 <div className='auth_logo_container'>
-                    <Link to='/'><img src={Logo}></img></Link>
+                    <Link to='/'><img src={Logo} alt="logo"></img></Link>
                 </div>
                 <div className='auth_form'>
                     <Container>

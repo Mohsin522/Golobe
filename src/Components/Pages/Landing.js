@@ -1,8 +1,5 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../Common/Footer';
 import Heading from '../Common/Heading';
 import Reviews from '../Common/Home/Reviews';
 import Banner from '../Common/Home/Banner';
@@ -12,7 +9,6 @@ import TripSection from '../Common/Home/TripSection';
 
 
 const Landing = () => {
-  let navigate =useNavigate();
   return (
     <div className='landing_wrapper'>
        <Banner />

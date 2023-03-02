@@ -8,6 +8,41 @@ import Select from '@mui/material/Select';
 import SearchIcon from '@mui/icons-material/Search';
 import Dropdown from 'react-bootstrap/Dropdown';
 import FlightCard from '../../Common/Flight/FlightCard';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Slider from '@mui/material/Slider';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+const pricemarks = [
+    {
+      value: 0,
+      label: '$0',
+    },
+    {
+
+      value: 100,
+      label: '$100',
+    },
+  ];
+  const departuremarks = [
+    {
+      value: 0,
+      label: '12:01Am',
+    },
+    {
+
+      value: 100,
+      label: '12:01Pm',
+
+    },
+  ];
+
+
+const minDistance = 10;
 
 const FlightsList = () => {
    
@@ -20,6 +55,20 @@ const FlightsList = () => {
     const TabAction=(index)=>{
         setTab(index);
     }
+    const [price, setPrice] = useState([0, 100]);
+
+  const handlePriceChange = (event, newValue, activeThumb) => {
+    if (!Array.isArray(newValue)) {
+      return;
+    }
+
+    if (activeThumb === 0) {
+        setPrice([Math.min(newValue[0], price[1] - minDistance), price[1]]);
+    } else {
+        setPrice([price[0], Math.max(newValue[1], price[0] + minDistance)]);
+    }
+  };
+
   return (
     <>
         <div className='flights_list_outer'>
@@ -100,7 +149,113 @@ const FlightsList = () => {
                 <Row>
                     <div className='col-12 col-md-4'>
                         <div className='Filter_outer'>
-                            <div className='Filter_inner_container'></div>
+                            <div className='Filter_inner_container'>
+                                <h4 className='filter_heading'>Filters</h4>
+                                <div className='filter_accordian'>
+                                    <Accordion>
+                                        <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                        >
+                                        <Typography>Price</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                          <div className='range_slider'>
+                                            <Slider
+                                                    getAriaLabel={() => 'Minimum distance'}
+                                                    value={price}
+                                                    onChange={handlePriceChange}
+                                                    valueLabelDisplay="auto"
+                                                    disableSwap
+                                                    marks={pricemarks}
+                                                />
+                                            </div>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <Accordion>
+                                        <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel2a-content"
+                                        id="panel2a-header"
+                                        >
+                                        <Typography>Departure Time</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <div className='range_slider'>
+                                                <Slider
+                                                        getAriaLabel={() => 'Minimum distance'}
+                                                        value={price}
+                                                        onChange={handlePriceChange}
+                                                        valueLabelDisplay="auto"
+                                                        disableSwap
+                                                        marks={departuremarks}
+                                                    />
+                                                </div>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <Accordion>
+                                        <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel2a-content"
+                                        id="panel2a-header"
+                                        >
+                                        <Typography>Rating</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <div className='rating_buttons'>
+                                                <button className='rate_btn'>4.5</button>
+                                                <button className='rate_btn'>4.5</button>
+                                                <button className='rate_btn'>4.5</button>
+                                                <button className='rate_btn'>4.5</button>
+                                                <button className='rate_btn'>4.5</button>
+
+                                            </div>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <Accordion>
+                                        <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel2a-content"
+                                        id="panel2a-header"
+                                        >
+                                        <Typography>Airlines</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <div className='filter_ceckmarks_outer'>
+                                                 <FormGroup>
+                                                    <FormControlLabel control={<Checkbox defaultChecked />} label="Emirate" />
+                                                    <FormControlLabel control={<Checkbox defaultChecked />} label="Fly Dubai" />
+                                                    <FormControlLabel control={<Checkbox defaultChecked />} label="Etihad" />
+                                                    <FormControlLabel control={<Checkbox defaultChecked />} label="PIA" />
+
+                                                </FormGroup>
+                                            </div>
+                                        </AccordionDetails>
+                                    </Accordion>
+                                    <Accordion>
+                                        <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel2a-content"
+                                        id="panel2a-header"
+                                        >
+                                        <Typography>Trips</Typography>
+                                        </AccordionSummary>
+                                        <AccordionDetails>
+                                            <div className='filter_ceckmarks_outer'>
+                                                    <FormGroup>
+                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="Emirate" />
+                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="Fly Dubai" />
+                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="Etihad" />
+                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="PIA" />
+
+                                                    </FormGroup>
+                                                </div>
+                                        </AccordionDetails>
+                                    </Accordion>
+    
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='col-12 col-md-8'>

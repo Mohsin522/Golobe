@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { Container,Row } from 'react-bootstrap';
-import { Outlet, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import Heading from '../../Common/Heading';
 import Map from '../../Assets/Images/map.png'
 import Place1 from '../../Assets/Images/places/place1.png';
@@ -125,7 +125,7 @@ const Flight = () => {
         </Container>
         
         <div className='map_image_div'>
-          <img src={Map}></img>
+          <img src={Map} alt="Map"></img>
         </div>
       </div>
       <div className='travel_pakages_Section'>
