@@ -17,8 +17,8 @@ const Navbar = () => {
    });
  }, []);
   let location=useLocation();
-  const flightClass = location.pathname === "/flight" ? "flight_active_link" : "";
-  const hotelClass = location.pathname === "/hotel" ? "hotel_active_link" : "";
+  const flightClass = location.pathname.includes("/flight") ? "flight_active_link" : "";
+  const hotelClass = location.pathname.includes("/hotel") ? "hotel_active_link" : "";
 
 const handleToggler=()=>{
   setToggler(!navbartogle);
