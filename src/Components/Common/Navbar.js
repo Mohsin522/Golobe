@@ -4,6 +4,7 @@ import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import BedIcon from '@mui/icons-material/Bed';
 import Logo from '../Assets/Images/Logo.png';
 import NavLogo from '../Assets/Images/Navlogo.png';
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 
@@ -30,10 +31,10 @@ const handleToggler=()=>{
     <div className={`app_navbar ${location.pathname === "/" ? "home_Navbar" : ""} ${scroll ? "scroll_navbar" : ""}`}>
       <div className='mobile_nav'>
           <Link to="/"><img src={Logo} alt="navbar_logo"></img></Link>
-          <button onClick={()=>handleToggler()}>Open</button>
+          <button onClick={()=>handleToggler()}><MenuIcon /></button>
       </div>
       <div className={`navbar_inner ${navbartogle ? "toggle_navbar" : ""} `}>
-        <button className='navbar_close_btn'>Close</button>
+        <button className='navbar_close_btn' onClick={()=>setToggler(false)}><MenuIcon /></button>
         <div className='navbar_links'>
            <Link to="flight" className={flightClass}> <AirplanemodeActiveIcon className='aeroplane' /> Find Flight</Link>
            <Link to="hotel" className={hotelClass}> <BedIcon /> Find Stays</Link>
